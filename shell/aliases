@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#---------- Systems ------------
+
+alias grep='rg'
+alias cat='bat'
+alias ls='ls --color'
+alias ll='ls -lha'
