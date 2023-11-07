@@ -56,5 +56,6 @@ COPY shell/aliases /home/${USERNAME}/.config/
 
 # Configure user by adding zshPlug and default set of plugin
 COPY shell/.zshrc /home/${USERNAME}/
+RUN chown ${USERNAME}:${USERNAME} /home/${USERNAME}/.zshrc
 RUN mkdir -p /home/${USERNAME}/.local/share
 RUN cd /home/${USERNAME} ; curl -s https://raw.githubusercontent.com/Atlas34/zshPlug/master/install.sh -o install.sh ; chmod +x install.sh ; ./install.sh ; rm install.sh
